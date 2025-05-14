@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moda que Respiro | Consumo Consciente</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleguia.css">
+    <title>Moda que Respiro | Consumo Consciente</title>
+    <style>
+        
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleguia.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="#" class="logo" onclick="navigateTo('home')">
                 <span class="logo-icon">🌿</span>
                 Moda que Respiro
             </a>
             <nav>
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="guia.html">Guia de Marcas</a></li>
+                    <li><a href="#" onclick="navigateTo('home')">Início</a></li>
+                    <li><a href="#" onclick="navigateTo('guia')">Guia de Marcas</a></li>
                     <li><a href="#problema">Impactos</a></li>
-                     <li><a href="#Sobre">Sobre</a></li>
+                    <li><a href="#Sobre">Sobre</a></li>
                     <li><a href="#metas">Metas</a></li>
                     <li><a href="#inovação">Inovação</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -32,8 +40,9 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <section class="hero">
         <div class="hero-content">
             <h1>Você respira o que consome</h1>
             <p>Descubra marcas conscientes e faça parte da moda que respeita o planeta.</p>
@@ -208,233 +217,204 @@
             </div>
         </div>
     </footer>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moda que Respiro | Guia de Marcas Sustentáveis</title>
-    <link rel="stylesheet" href="styleguia.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">🌿</span>
-                Moda que Respiro
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="guia.html">Guia de Marcas</a></li>
-                    <li><a href="index.html#problema">Impactos</a></li>
-                     <li><a href="index.html#Sobre">Sobre</a></li>
-                    <li><a href="index.html#metas">Metas</a></li>
-                    <li><a href="index.html#inovação">Inovação</a></li>
-                    <li><a href="index.html#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Guide Hero -->
-    <section class="guide-hero">
-        <div class="container">
-            <h1>Guia de Marcas Sustentáveis</h1>
-            <p>Descubra as melhores marcas de moda consciente em São Paulo</p>
-        </div>
     </section>
 
-    <main class="container">
-        <!-- Filters -->
-        <section class="filter-section">
-            <h2>Encontre marcas que combinam com seus valores</h2>
-            <p>Filtre por categoria, materiais, preço e certificações</p>
-            
-            <div class="filter-grid">
-                <div class="filter-group">
-                    <label for="category">Categoria</label>
-                    <select id="category">
-                        <option>Todas as categorias</option>
-                        <option>Vestuário</option>
-                        <option>Acessórios</option>
-                        <option>Calçados</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label for="material">Materiais</label>
-                    <select id="material">
-                        <option>Todos os materiais</option>
-                        <option>Algodão orgânico</option>
-                        <option>Fibra reciclada</option>
-                        <option>Tecido vegano</option>
-                        <option>Bambu</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label for="price">Faixa de preço</label>
-                    <select id="price">
-                        <option>Todas as faixas</option>
-                        <option>Até R$100</option>
-                        <option>R$100 - R$300</option>
-                        <option>Acima de R$300</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label for="certification">Certificações</label>
-                    <select id="certification">
-                        <option>Todas</option>
-                        <option>ABVTEX</option>
-                        <option>EcoCert</option>
-                        <option>Fair Trade</option>
-                    </select>
-                </div>
+    <!-- Guia de Marcas Page -->
+    <section id="guia" class="page">
+        <!-- Guide Hero -->
+        <section class="guide-hero">
+            <div class="container">
+                <h1>Guia de Marcas Sustentáveis</h1>
+                <p>Descubra as melhores marcas de moda consciente em São Paulo</p>
             </div>
         </section>
 
-        <!-- Brands Grid -->
-        <div class="brands-grid">
-            <!-- Brand 1 -->
-            <div class="brand-card">
-                <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80');">
-                    <span class="brand-badge">⭐ Top Pick</span>
-                </div>
-                <div class="brand-info">
-                    <h3>EcoVest</h3>
-                    <p>Roupas femininas em algodão orgânico com produção ética</p>
-                    <div class="brand-tags">
-                        <span class="tag">Vestuário</span>
-                        <span class="tag">Algodão orgânico</span>
-                        <span class="tag">Produção local</span>
+        <main class="container">
+            <!-- Filters -->
+            <section class="filter-section">
+                <h2>Encontre marcas que combinam com seus valores</h2>
+                <p>Filtre por categoria, materiais, preço e certificações</p>
+                
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="category">Categoria</label>
+                        <select id="category">
+                            <option>Todas as categorias</option>
+                            <option>Vestuário</option>
+                            <option>Acessórios</option>
+                            <option>Calçados</option>
+                        </select>
                     </div>
-                    <div class="brand-meta">
-                        <span>Vila Madalena</span>
-                        <span>$$</span>
+                    
+                    <div class="filter-group">
+                        <label for="material">Materiais</label>
+                        <select id="material">
+                            <option>Todos os materiais</option>
+                            <option>Algodão orgânico</option>
+                            <option>Fibra reciclada</option>
+                            <option>Tecido vegano</option>
+                            <option>Bambu</option>
+                        </select>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Brand 2 -->
-            <div class="brand-card">
-                <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80');">
-                    <span class="brand-badge">Novo</span>
-                </div>
-                <div class="brand-info">
-                    <h3>Fibra Verde</h3>
-                    <p>Acessórios em fibra de bananeira e materiais reciclados</p>
-                    <div class="brand-tags">
-                        <span class="tag">Acessórios</span>
-                        <span class="tag">Fibra natural</span>
-                        <span class="tag">Upcycling</span>
+                    
+                    <div class="filter-group">
+                        <label for="price">Faixa de preço</label>
+                        <select id="price">
+                            <option>Todas as faixas</option>
+                            <option>Até R$100</option>
+                            <option>R$100 - R$300</option>
+                            <option>Acima de R$300</option>
+                        </select>
                     </div>
-                    <div class="brand-meta">
-                        <span>Pinheiros</span>
-                        <span>$$$</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Brand 3 -->
-            <div class="brand-card">
-                <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=736&q=80');">
-                    <span class="brand-badge">Melhor custo-benefício</span>
-                </div>
-                <div class="brand-info">
-                    <h3>VestiVerde</h3>
-                    <p>Moda masculina sustentável com tecidos tecnológicos</p>
-                    <div class="brand-tags">
-                        <span class="tag">Vestuário</span>
-                        <span class="tag">Tecido vegano</span>
-                        <span class="tag">ABVTEX</span>
-                    </div>
-                    <div class="brand-meta">
-                        <span>Online</span>
-                        <span>$$</span>
+                    
+                    <div class="filter-group">
+                        <label for="certification">Certificações</label>
+                        <select id="certification">
+                            <option>Todas</option>
+                            <option>ABVTEX</option>
+                            <option>EcoCert</option>
+                            <option>Fair Trade</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Brand 4 -->
-            <div class="brand-card">
-                <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80');">
-                    <span class="brand-badge">EcoCert</span>
-                </div>
-                <div class="brand-info">
-                    <h3>CalceConsciente</h3>
-                    <p>Calçados em couro vegetal e materiais reciclados</p>
-                    <div class="brand-tags">
-                        <span class="tag">Calçados</span>
-                        <span class="tag">Couro vegetal</span>
-                        <span class="tag">Produção artesanal</span>
-                    </div>
-                    <div class="brand-meta">
-                        <span>Jardins</span>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Brand 5 -->
-            <div class="brand-card">
-                <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
-                    <span class="brand-badge">Fair Trade</span>
-                </div>
-                <div class="brand-info">
-                    <h3>BioFios</h3>
-                    <p>Roupas infantis em algodão orgânico e tingimento natural</p>
-                    <div class="brand-tags">
-                        <span class="tag">Infantil</span>
-                        <span class="tag">Algodão orgânico</span>
-                        <span class="tag">Tingimento natural</span>
-                    </div>
-                    <div class="brand-meta">
-                        <span>Online</span>
-                        <span>$$</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Brand 6 -->
-            <div class="brand-card">
-                <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
-                    <span class="brand-badge">Novo</span>
-                </div>
-                <div class="brand-info">
-                    <h3>Retalhos</h3>
-                    <p>Bolsas e acessórios em retalhos e sobras de tecido</p>
-                    <div class="brand-tags">
-                        <span class="tag">Acessórios</span>
-                        <span class="tag">Upcycling</span>
-                        <span class="tag">Produção artesanal</span>
-                    </div>
-                    <div class="brand-meta">
-                        <span>Vila Mariana</span>
-                        <span>$</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- Pagination -->
-        <div class="pagination">
-            <a href="#" class="page-btn active">1</a>
-    
-        </div>
-    </main>
+            <!-- Brands Grid -->
+            <div class="brands-grid">
+                <!-- Brand 1 -->
+                <div class="brand-card">
+                    <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80');">
+                        <span class="brand-badge">⭐ Top Pick</span>
+                    </div>
+                    <div class="brand-info">
+                        <h3>EcoVest</h3>
+                        <p>Roupas femininas em algodão orgânico com produção ética</p>
+                        <div class="brand-tags">
+                            <span class="tag">Vestuário</span>
+                            <span class="tag">Algodão orgânico</span>
+                            <span class="tag">Produção local</span>
+                        </div>
+                        <div class="brand-meta">
+                            <span>Vila Madalena</span>
+                            <span>$$</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brand 2 -->
+                <div class="brand-card">
+                    <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80');">
+                        <span class="brand-badge">Novo</span>
+                    </div>
+                    <div class="brand-info">
+                        <h3>Fibra Verde</h3>
+                        <p>Acessórios em fibra de bananeira e materiais reciclados</p>
+                        <div class="brand-tags">
+                            <span class="tag">Acessórios</span>
+                            <span class="tag">Fibra natural</span>
+                            <span class="tag">Upcycling</span>
+                        </div>
+                        <div class="brand-meta">
+                            <span>Pinheiros</span>
+                            <span>$$$</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brand 3 -->
+                <div class="brand-card">
+                    <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=736&q=80');">
+                        <span class="brand-badge">Melhor custo-benefício</span>
+                    </div>
+                    <div class="brand-info">
+                        <h3>VestiVerde</h3>
+                        <p>Moda masculina sustentável com tecidos tecnológicos</p>
+                        <div class="brand-tags">
+                            <span class="tag">Vestuário</span>
+                            <span class="tag">Tecido vegano</span>
+                            <span class="tag">ABVTEX</span>
+                        </div>
+                        <div class="brand-meta">
+                            <span>Online</span>
+                            <span>$$</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brand 4 -->
+                <div class="brand-card">
+                    <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80');">
+                        <span class="brand-badge">EcoCert</span>
+                    </div>
+                    <div class="brand-info">
+                        <h3>CalceConsciente</h3>
+                        <p>Calçados em couro vegetal e materiais reciclados</p>
+                        <div class="brand-tags">
+                            <span class="tag">Calçados</span>
+                            <span class="tag">Couro vegetal</span>
+                            <span class="tag">Produção artesanal</span>
+                        </div>
+                        <div class="brand-meta">
+                            <span>Jardins</span>
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brand 5 -->
+                <div class="brand-card">
+                    <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+                        <span class="brand-badge">Fair Trade</span>
+                    </div>
+                    <div class="brand-info">
+                        <h3>BioFios</h3>
+                        <p>Roupas infantis em algodão orgânico e tingimento natural</p>
+                        <div class="brand-tags">
+                            <span class="tag">Infantil</span>
+                            <span class="tag">Algodão orgânico</span>
+                            <span class="tag">Tingimento natural</span>
+                        </div>
+                        <div class="brand-meta">
+                            <span>Online</span>
+                            <span>$$</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brand 6 -->
+                <div class="brand-card">
+                    <div class="brand-image" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+                        <span class="brand-badge">Novo</span>
+                    </div>
+                    <div class="brand-info">
+                        <h3>Retalhos</h3>
+                        <p>Bolsas e acessórios em retalhos e sobras de tecido</p>
+                        <div class="brand-tags">
+                            <span class="tag">Acessórios</span>
+                            <span class="tag">Upcycling</span>
+                            <span class="tag">Produção artesanal</span>
+                        </div>
+                        <div class="brand-meta">
+                            <span>Vila Mariana</span>
+                            <span>$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-btn active">1</a>
+            </div>
+        </main>
+    </section>
 
     <!-- Footer -->
-    <footer id="Contato">
+    <footer id="contato">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="index.html" class="footer-logo">Moda que Respiro</a>
+                    <a href="#" class="footer-logo" onclick="navigateTo('home')">Moda que Respiro</a>
                     <p>Plataforma de moda sustentável e consumo consciente em São Paulo.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"> Instagram</i></a>
@@ -445,8 +425,8 @@
                 <div class="footer-links">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="index.html">Página Inicial</a></li>
-                        <li><a href="#">Guia de Marcas</a></li>
+                        <li><a href="#" onclick="navigateTo('home')">Página Inicial</a></li>
+                        <li><a href="#" onclick="navigateTo('guia')">Guia de Marcas</a></li>
                         <li><a href="#">Dicas Sustentáveis</a></li>
                         <li><a href="#">Sobre o Projeto</a></li>
                     </ul>
@@ -475,5 +455,46 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Função para navegar entre as páginas
+        function navigateTo(pageId) {
+            // Esconde todas as páginas
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Mostra a página selecionada
+            document.getElementById(pageId).classList.add('active');
+            
+            // Rolagem para o topo
+            window.scrollTo(0, 0);
+        }
+
+        // Tratamento para links de âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        // Verifica se o elemento está em uma página não ativa
+                        const parentPage = targetElement.closest('.page');
+                        if (parentPage && !parentPage.classList.contains('active')) {
+                            // Ativa a página pai primeiro
+                            navigateTo(parentPage.id);
+                        }
+                        
+                        // Rolagem suave para o elemento
+                        setTimeout(() => {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
